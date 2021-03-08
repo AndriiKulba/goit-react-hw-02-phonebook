@@ -1,0 +1,13 @@
+.contacts__list {
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+}
+.contacts__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contacts__item:not(:last-child) {
+  margin-bottom: 10px;
+}

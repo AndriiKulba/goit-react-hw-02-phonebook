@@ -1,0 +1,19 @@
+.phonebook h1 {
+  margin-top: 0px;
+}
+.phonebook__form {
+  display: block;
+  width: 300px;
+
+  margin: auto;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: rgb(190, 220, 248);
+  border: 1px solid grey;
+}
+
+.phonebook__name input,
+.phonebook__tel input {
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
