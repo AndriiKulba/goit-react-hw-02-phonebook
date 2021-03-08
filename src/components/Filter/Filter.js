@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -16,6 +17,12 @@ const Filter = ({ filter, handleChange }) => {
       />
     </label>
   );
+};
+
+Filter.defaultProps = { filter: '' };
+Filter.propTypes = {
+  filter: PropTypes.string,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default Filter;

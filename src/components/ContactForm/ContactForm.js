@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './ContactForm.module.css';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -25,7 +26,7 @@ const ContactForm = ({ title, name, number, handleChange, handleSubmit }) => {
             type="tel"
             name="number"
             pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
-            placeholder="___-__-__"
+            placeholder="111-22-33"
             value={number}
             id={numberInputID}
             onChange={handleChange}
@@ -37,6 +38,14 @@ const ContactForm = ({ title, name, number, handleChange, handleSubmit }) => {
       </form>
     </div>
   );
+};
+ContactForm.defaultProps = { title: 'Phonebook', name: '', number: '' };
+ContactForm.propTypes = {
+  title: PropTypes.string,
+  name: PropTypes.string,
+  number: PropTypes.number,
+  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default ContactForm;

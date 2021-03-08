@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './ContactItem.module.css';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -20,5 +21,14 @@ const ContactItem = ({ visibleContacts, deleteContact }) => {
     </ul>
   );
 };
-
+ContactItem.propTypes = {
+  visibleContacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.number.isRequired,
+    }),
+  ),
+  deleteContact: PropTypes.func.isRequired,
+};
 export default ContactItem;

@@ -59,7 +59,7 @@ class App extends Component {
 
   render() {
     const { contacts, filter, name, number } = this.state;
-    const visibleContacts = this.state.contacts
+    const visibleContacts = contacts
       .filter(contact =>
         contact.name.toLowerCase().includes(this.state.filter.toLowerCase()),
       )
